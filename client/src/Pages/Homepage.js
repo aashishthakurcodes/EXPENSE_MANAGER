@@ -83,10 +83,11 @@ const Homepage = () => {
         });
         setLoading(false);
 
-        message.success("Transaction Edit successfully");
+        
         setTimeout(() => {
           window.location.reload();
         }, 1000);
+        message.success("Transaction Edit successfully");
       } else {
         await axios.post("/api/v1/transections/add-data", {
           ...values,
@@ -94,10 +95,11 @@ const Homepage = () => {
         });
         setLoading(false);
 
-        message.success("Transaction Added successfully");
+        
         setTimeout(() => {
           window.location.reload();
-        }, 1000); 
+        }, 1000);
+        message.success("Transaction Added successfully");
       }
 
       setShow(false);
@@ -139,10 +141,11 @@ const Homepage = () => {
       setLoading(true);
       await axios.post("/api/v1/transections/delete", { transectionId: record._id });
       setLoading(false);
-      message.success("Transection  deleted successfully");
+      
       setTimeout(() => {
         window.location.reload();
       }, 1000);
+      message.success("Transection  deleted successfully");
     
     } catch (error) {
       console.log(error);
