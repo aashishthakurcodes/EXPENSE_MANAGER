@@ -57,11 +57,11 @@
         
     }
     .progress_01{
-        width: 100%;
+        width: 350px;
     }
     .category{
-        padding: 5px;
-        margin-top: 20px;
+        padding: 3px;
+        margin-top: 15px;
     }
     .category_data{
         width: 100%;
