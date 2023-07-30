@@ -141,7 +141,7 @@ const Analytic = ({ getData }) => {
             const amount = getData
               .filter(
                 (transection) =>
-                  transection.type === "income" &&
+                  transection.type === "expense" &&
                   transection.category === category
               )
               .reduce((acc, transection) => acc + transection.amount, 0);
