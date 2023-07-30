@@ -9,6 +9,7 @@
     border: 2px double rgb(12, 12, 12);
     width: 400px;
     box-shadow: 15px 12px 25px -15px rgba(0,0,0,0.75);
+    /* border: 2px solid red; */
     
 }
 .progress_main{
@@ -57,7 +58,9 @@
         
     }
     .progress_01{
-        width: 350px;
+        width: 80%;
+        margin: auto;
+        /* border: 2px solid red; */
     }
     .category{
         padding: 3px;
@@ -70,3 +73,18 @@
         font-size: 18px;
     }
 }
+@media screen and (max-width: 350px) {
+  .progress_01{
+    width: 100%;
+  
+  }
+  .wrapper{
+    
+    padding: 0px;
+    width: 90%;
+   margin: auto;
+   
+  }
+
+  
+  }

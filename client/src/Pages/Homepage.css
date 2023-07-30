@@ -136,3 +136,10 @@
       /* border: 2px solid red; */
     }
 }
+
+@media screen and (max-width: 350px) {
+  .userData{
+    padding: 10px;
+    /* overflow-x: none; */
+  }
+}

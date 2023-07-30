@@ -11,23 +11,14 @@
   
   align-items: center;
   /* background: rgba(0, 0, 0, 0.8); */
-  color: #ffff;
-  background:#ffff;
+  /* color: #ffff;
+  background:#ffff; */
   max-width: 1400px;
   margin: auto;
 
 }
 
-.container {
-  /* border: 3px solid yellow; */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 20px;
-  padding-top: 80px;
-  
-  
-}
+
 
 .logo {
   max-width: 100%;
@@ -46,5 +37,24 @@
   }
   .logout_btn:hover{
     background: rgb(107, 107, 209); 
+  }
+
+  @media screen and (max-width: 450px) {
+    .username{
+      font-size: 14px;
+    }
+    .logo{
+      height: 50px;
+    }
+    .logout_btn{
+      padding: 8px 16px;
+      font-weight: 400;
+    }
+  }
+
+  @media screen and (max-width: 350px) {
+    .username{
+      font-size: 12px;
+    }
   }
  
