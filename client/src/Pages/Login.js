@@ -6,6 +6,7 @@ import Loading from "../Component/Layout/Loading";
 import { useState } from "react";
  import './login.css'
  import img1 from  "../Images/computer-login-concept-illustration_114360-7892.avif"
+import Password from "antd/es/input/Password";
 const Login = () => {
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
@@ -14,7 +15,7 @@ const Login = () => {
       setLoading(true);
       const { data } = await axios.post("/api/v1/users/login", values);
       message.success("Login Successfully");
-      localStorage.setItem("user", JSON.stringify({ ...data.user }));
+      localStorage.setItem("user", JSON.stringify({ ...data.user,password:'' }));
       console.log(localStorage.getItem("user"));
 
       setLoading(false);
