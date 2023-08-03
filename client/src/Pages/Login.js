@@ -10,14 +10,16 @@ import Password from "antd/es/input/Password";
 const Login = () => {
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
+
+
+
   const submitHandler = async (values) => {
     try {
       setLoading(true);
       const { data } = await axios.post("/api/v1/users/login", values);
       message.success("Login Successfully");
-      localStorage.setItem("user", JSON.stringify({ ...data.user,password:'' }));
+      localStorage.setItem("user", JSON.stringify({ ...data.user }));
       console.log(localStorage.getItem("user"));
-
       setLoading(false);
       navigate("/");
     } catch (error) {

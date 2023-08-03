@@ -16,7 +16,7 @@ connectDB();
 const app = express();
 
 // Middlewares
-app.use(morgan('dev'));
+// app.use(morgan('dev'));
 app.use(express.json());
 app.use(cors()); // Enable CORS for all domains. You can specify specific domains if needed.
 
