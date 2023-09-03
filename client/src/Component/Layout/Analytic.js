@@ -15,6 +15,7 @@ const Analytic = ({ getData }) => {
     "tax",
     "grocery",
     "Maintenance",
+    "Entertainment"
   ];
 
   const totalTransec = getData.length;
