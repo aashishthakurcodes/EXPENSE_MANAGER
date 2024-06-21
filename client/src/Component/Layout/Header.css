@@ -1,20 +1,13 @@
 
 .main {
-  position: fixed;
+position: fixed;
   top: 0;
-  left: 0;
   width: 100%;
   box-shadow: -1px 24px 25px -12px rgba(0, 0, 0, 0.75);
   display: flex;
   justify-content: space-between;
   overflow: hidden;
-  
   align-items: center;
-  /* background: rgba(0, 0, 0, 0.8); */
-  /* color: #ffff;
-  background:#ffff; */
-  max-width: 1400px;
-  margin: auto;
 
 }
 
