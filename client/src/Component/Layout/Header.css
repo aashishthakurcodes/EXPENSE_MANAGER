@@ -1,5 +1,5 @@
 .main {
-  position: fixed;
+position: fixed;
   top: 0;
   width: 100%;
   box-shadow: -1px 24px 25px -12px rgba(0, 0, 0, 0.75);
@@ -7,6 +7,10 @@
   justify-content: space-between;
   overflow: hidden;
   align-items: center;
+<<<<<<< HEAD
+=======
+
+>>>>>>> a713ea58b3c9c45bcf9c9adba3e512bc47d5d591
 }
 
 .logo {
@@ -52,4 +56,8 @@
   .username {
     font-size: 12px;
   }
+<<<<<<< HEAD
 }
+=======
+ 
+>>>>>>> a713ea58b3c9c45bcf9c9adba3e512bc47d5d591
