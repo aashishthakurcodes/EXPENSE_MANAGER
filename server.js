@@ -34,6 +34,8 @@ app.get('*',function(req,res){
 
 // PORT
 const PORT = process.env.PORT || 8080;
+console.log("DataBsaw connection")
+console.log(process.env.port)
 
 // Listen
 app.listen(PORT, () => {

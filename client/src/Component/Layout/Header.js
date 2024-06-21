@@ -20,13 +20,14 @@ const Header = () => {
     message.success("Logout Successfully");
     navigate("/login");
   };
+  
   return (
     <div>
       <nav className="main">
     
         <div className="logo-container"><img className="logo" src={img3} alt="logo"/></div>
      <div className="container">
-          <span className="username">Welcome {loginUser && loginUser.name}</span>
+          <span className="username" >Welcome {loginUser && loginUser.name}</span>
         </div> 
         <div>
         <button className="logout_btn" onClick={logoutHandler}>Logout</button>

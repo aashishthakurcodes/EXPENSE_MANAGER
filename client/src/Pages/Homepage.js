@@ -44,9 +44,10 @@ const Homepage = () => {
       dataIndex: "category",
     },
     {
-      title: "Refrence",
-      dataIndex: "reference",
+      title: "Description",
+      dataIndex: "description",
     },
+    
     {
       title: "Actions",
       render: (text, record) => (
@@ -74,7 +75,7 @@ const Homepage = () => {
       console.log("User ID:", user._id);
       setLoading(true);
       if (editable) {
-        await axios.post("/api/v1/transections/edit", {
+        await axios.post("api/v1/transections/edit", {
           payload: {
             ...values,
             userId: user._id,
@@ -83,19 +84,17 @@ const Homepage = () => {
         });
         setLoading(false);
 
-        
         setTimeout(() => {
           window.location.reload();
         }, 1000);
         message.success("Transaction Edit successfully");
       } else {
-        await axios.post("/api/v1/transections/add-data", {
+        await axios.post("api/v1/transections/add-data", {
           ...values,
           userid: user._id,
         });
         setLoading(false);
 
-        
         setTimeout(() => {
           window.location.reload();
         }, 1000);
@@ -118,7 +117,7 @@ const Homepage = () => {
       try {
         const user = JSON.parse(localStorage.getItem("user"));
         setLoading(true);
-        const res = await axios.post("/api/v1/transections/getall", {
+        const res = await axios.post("api/v1/transections/getall", {
           userid: user._id,
           frequency,
           selectDate,
@@ -139,14 +138,13 @@ const Homepage = () => {
   const handleDelete = async (record) => {
     try {
       setLoading(true);
-      await axios.post("/api/v1/transections/delete", { transectionId: record._id });
+      await axios.post("api/v1/transections/delete", { transectionId: record._id });
       setLoading(false);
-      
+
       setTimeout(() => {
         window.location.reload();
       }, 1000);
       message.success("Transection  deleted successfully");
-    
     } catch (error) {
       console.log(error);
       setLoading(false);
@@ -263,10 +261,6 @@ const Homepage = () => {
             </Select>
           </Form.Item>
 
-          <Form.Item label="Reference" name="reference">
-            <Input type="text" />
-          </Form.Item>
-
           <Form.Item label="Description" name="description">
             <Input type="text" />
           </Form.Item>
@@ -276,7 +270,10 @@ const Homepage = () => {
           </Form.Item>
 
           <div>
-            <button type="submit"> Save</button>
+            <button type="submit" className="datasave">
+              {" "}
+              Save
+            </button>
           </div>
         </Form>
       </Modal>

@@ -1,7 +1,7 @@
 /* Homepage.css */
 
 .homepage {
-  /* border: 2px solid red; */
+  /* border: 2px solid rgb(0, 0, 0); */
   margin-top: 100px;
   display: flex;
   /* flex-direction: column; */
@@ -29,25 +29,40 @@
   padding: 0px 20px;
   
 }
+.datasave{
+  padding: 8px 15px;
+
+  /* background: rgb(109, 248, 134); */
+  color: #080808;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.datasave:hover{
+  background: rgb(33, 76, 217);
+  color: #ffff;
+
+
+}
 
 .userData{
 
   margin-top: 15px;
-  border: 2px solid rgb(0, 0, 0);
+  /* border: 2px solid rgb(0, 0, 0); */
   position: fixed;
   top: 150px;
   bottom: 10px;
   width: 100%;
-  height: 300px;
+  height: 400px;
+  /* background-color: #a9a0a0; */
+  /* border: 2px solid rgb(8, 8, 8); */
+  display: flex;
+  justify-content: flex-start;
+  align-items: self-start;
+  
+ 
+
   
 }
-/* .user_wrapper{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  border: 3px solid green;
-  height: 500px;
-} */
 
 .filters .frequency,
 .filters .charts,
@@ -64,6 +79,7 @@
 
 .charts {
   gap: 20px;
+  
 }
 
 .addbtn {
@@ -79,24 +95,19 @@
   background: rgb(102, 158, 233);
 }
 
-.userData {
-  padding: 20px;
-  overflow-x: scroll;
-}
+
 
 .content-wrapper {
   /* Set the desired height for the table body wrapper */
   max-height: 400px;
-  overflow-y: auto;
+  width: 100%;
+  padding: 0px 10px;
+  /* border: 2px solid rgb(14, 13, 13); */
+  border-radius: 10px;
+  overflow: auto;
 }
 
-.ant-table-thead > tr > th {
-  white-space: nowrap;
-  position: sticky;
-  top: 0; /* This will fix the table heading at the top of the table when scrolling */
-  background-color: #f0f0f0;
-  z-index: 1; /* Ensure the heading is above the table body while scrolling */
-}
+
 
 @media screen and (max-width:450px) {
  .homepage{

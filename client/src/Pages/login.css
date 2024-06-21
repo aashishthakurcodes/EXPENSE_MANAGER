@@ -1,7 +1,5 @@
 
 .container_login{
-    /* width: 500px; */
-    /* border: 2px solid red; */
     display: flex;
     height: 99.3vh;
     overflow: hidden;
@@ -40,15 +38,15 @@
 }
 .form{
     box-shadow: 4px 1px 12px 4px rgba(0,0,0,0.75);
-    /* border: 3px solid gray; */
+    /* border: 3px solid red; */
     border-radius: 10px;
     justify-content: space-around;
-    height: 100%;
+   
     background: #fcfcfc;
     display: flex;
     flex-direction: column;
     width: 50%;
-    height: 420px;
+   
     align-items: center;
 }
 .login_data{
